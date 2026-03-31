@@ -1432,9 +1432,7 @@ namespace iSkorpionA12
 
  
         #endregion
-
-
-
+         
         #region Private Methods - UI Updates
 
         private void UpdateStatus(string message)
