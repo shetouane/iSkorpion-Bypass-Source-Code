@@ -12,8 +12,7 @@ using System.Security.Permissions;
 
 namespace System.Windows.Forms
 
-{
-
+{ 
     public class MessageBoxManager
     {
         private delegate IntPtr HookProc(int nCode, IntPtr wParam, IntPtr lParam);

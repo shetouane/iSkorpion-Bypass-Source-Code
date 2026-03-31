@@ -182,10 +182,7 @@ namespace iSkorpionAiO_RE
             catch
             {
                 //
-            }
-
-
-
+            } 
         }
 
 
@@ -326,22 +323,17 @@ namespace iSkorpionAiO_RE
 
         private void ListenError(object sender, ListenErrorEventHandlerEventArgs args)
         {
-            // status2.Text += "\r\n Device Disconnected!";
+             status2.Text += "\r\n Device Disconnected!";
         }
         private void RecoveryMode(object sender, DeviceRecoveryConnectEventArgs e)
-        {
-
+        { 
             statux2("Device Connected in Recovery Mode");
-            MODELBL.Text = "Recovery";
-
-
+            MODELBL.Text = "Recovery"; 
         }
+
         private void DFUMode(object sender, DeviceDfuConnectEventArgs e)
-        {
-
-            iRecovery();
-
-
+        { 
+            iRecovery(); 
         }
 
         public async void readNormalMode()
@@ -2008,11 +2000,19 @@ namespace iSkorpionAiO_RE
 
         private void RamFolder_Click(object sender, EventArgs e)
         {
+            if (!Directory.Exists(ToolDir + "\\Ramdisk\\"))
+            {
+                Directory.CreateDirectory(ToolDir + "\\Ramdisk\\");
+            }
             Process.Start(ToolDir + "\\Ramdisk\\");
         }
 
         private void BackupsBTN_Click(object sender, EventArgs e)
         {
+            if (!Directory.Exists(ToolDir + "\\Backup\\"))
+            {
+                Directory.CreateDirectory(ToolDir + "\\Backup\\");
+            }
             Process.Start(ToolDir + "\\Backup\\");
         }
 
@@ -2026,6 +2026,7 @@ namespace iSkorpionAiO_RE
             {
                 Directory.CreateDirectory(backupfolder);
             }
+
             try
             {
 
